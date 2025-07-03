@@ -535,3 +535,20 @@ window.addEventListener('load', function() {
         }, 500);
     }
 });
+
+// Fungsi mainkan suara
+function mainkanKlik() {
+    const klikSound = document.getElementById("klikSound");
+    klikSound.currentTime = 0;
+    klikSound.play();
+}
+
+// Deteksi klik ke semua elemen tombol/link
+document.addEventListener("DOMContentLoaded", () => {
+    document.body.addEventListener("click", (e) => {
+        // Boleh dibatasi ke elemen tertentu saja
+        if (e.target.tagName === "BUTTON" || e.target.tagName === "A") {
+            mainkanKlik();
+        }
+    });
+});
