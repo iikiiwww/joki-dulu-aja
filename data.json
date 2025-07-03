@@ -1,0 +1,411 @@
+{
+  "services": [
+    {
+      "id": "joki-rank",
+      "icon": "fas fa-trophy",
+      "title": "Joki Rank",
+      "description": "Naik rank dengan cepat dan aman dari Warrior hingga Mythical Glory",
+      "price": "Mulai dari Rp 10.000",
+      "gradient": "linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)",
+      "features": [
+        "Login via ID (Lebih Aman)",
+        "Proses 1-3 Hari",
+        "Garansi Turun Rank",
+        "Update Progress Real-time",
+        "Support 24/7"
+      ],
+      "packages": [
+        {
+          "from": "Warrior",
+          "to": "Elite",
+          "price": 15000,
+          "duration": "1-2 Hari"
+        },
+        {
+          "from": "Elite",
+          "to": "Master",
+          "price": 25000,
+          "duration": "2-3 Hari"
+        },
+        {
+          "from": "Master",
+          "to": "Grandmaster",
+          "price": 35000,
+          "duration": "3-4 Hari"
+        },
+        {
+          "from": "Grandmaster",
+          "to": "Epic",
+          "price": 50000,
+          "duration": "4-5 Hari"
+        },
+        {
+          "from": "Epic",
+          "to": "Legend",
+          "price": 75000,
+          "duration": "5-7 Hari"
+        },
+        {
+          "from": "Legend",
+          "to": "Mythic",
+          "price": 100000,
+          "duration": "7-10 Hari"
+        }
+      ]
+    },
+    {
+      "id": "top-up",
+      "icon": "fas fa-gem",
+      "title": "Top Up Diamond",
+      "description": "Top up diamond dengan harga terjangkau dan proses instan",
+      "price": "Mulai dari Rp 15.000",
+      "gradient": "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)",
+      "features": [
+        "Proses Otomatis & Instan",
+        "Harga Termurah Se-Indonesia",
+        "Tidak Perlu Login",
+        "Aman & Terpercaya",
+        "Customer Service 24/7"
+      ],
+      "packages": [
+        {
+          "amount": "86 Diamonds",
+          "price": 20000,
+          "bonus": "+6 Bonus"
+        },
+        {
+          "amount": "172 Diamonds",
+          "price": 40000,
+          "bonus": "+14 Bonus"
+        },
+        {
+          "amount": "257 Diamonds",
+          "price": 60000,
+          "bonus": "+26 Bonus"
+        },
+        {
+          "amount": "344 Diamonds",
+          "price": 80000,
+          "bonus": "+35 Bonus"
+        },
+        {
+          "amount": "429 Diamonds",
+          "price": 100000,
+          "bonus": "+47 Bonus"
+        },
+        {
+          "amount": "514 Diamonds",
+          "price": 120000,
+          "bonus": "+58 Bonus"
+        }
+      ]
+    },
+    {
+      "id": "joki-classic",
+      "icon": "fas fa-medal",
+      "title": "Joki Classic",
+      "description": "Menyelesaikan misi dan achievement dengan profesional",
+      "price": "Mulai dari Rp 5.000",
+      "gradient": "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+      "features": [
+        "Selesaikan Daily Quest",
+        "Unlock Achievement",
+        "Farming Gold & EXP",
+        "Complete Event Tasks",
+        "Hero Mastery"
+      ],
+      "packages": [
+        {
+          "task": "10 Classic Games",
+          "price": 15000,
+          "duration": "1 Hari"
+        },
+        {
+          "task": "20 Classic Games",
+          "price": 25000,
+          "duration": "2 Hari"
+        },
+        {
+          "task": "50 Classic Games",
+          "price": 50000,
+          "duration": "3-4 Hari"
+        },
+        {
+          "task": "Weekly Missions",
+          "price": 30000,
+          "duration": "7 Hari"
+        },
+        {
+          "task": "Event Completion",
+          "price": 40000,
+          "duration": "Sesuai Event"
+        },
+        {
+          "task": "Hero to Expert",
+          "price": 60000,
+          "duration": "5-7 Hari"
+        }
+      ]
+    }
+  ],
+  "skins": [
+    {
+      "id": "yin-starlight",
+      "name": "Yin",
+      "title": "Moonlight Sentinel",
+      "type": "Starlight Skin",
+      "category": "Starlight",
+      "rarity": "starlight",
+      "image": "https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "description": "Skin eksklusif dari event Starlight bulan ini dengan efek visual yang menakjubkan. Dapatkan tampilan yang elegan dengan animasi khusus yang memukau di battlefield.",
+      "price": "Starlight Member",
+      "availability": "Terbatas",
+      "features": [
+        "Efek skill yang berbeda",
+        "Animasi recall eksklusif",
+        "Voice line khusus",
+        "Spawn effect unik"
+      ]
+    },
+    {
+      "id": "balmond-collector",
+      "name": "Balmond",
+      "title": "Savage Guardian",
+      "type": "Collector Skin",
+      "category": "Collector",
+      "rarity": "collector",
+      "image": "https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "description": "Skin collector dengan desain yang memukau dan efek khusus yang unik. Tampil sebagai guardian savage dengan armor yang menawan.",
+      "price": "Event Terbatas",
+      "availability": "Langka",
+      "features": [
+        "Model 3D yang diubah total",
+        "Efek ultimate yang spektakuler",
+        "Background lobby eksklusif",
+        "Emoticon khusus"
+      ]
+    },
+    {
+      "id": "chou-kof",
+      "name": "Chou",
+      "title": "Dragon Fighter",
+      "type": "KOF Collaboration",
+      "category": "Epic",
+      "rarity": "epic",
+      "image": "https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "description": "Kolaborasi eksklusif dengan King of Fighters dengan animasi fighting yang spektakuler. Rasakan kekuatan petarung legendaris dari dunia KOF.",
+      "price": "899 Diamonds",
+      "availability": "Tersedia",
+      "features": [
+        "Skill effect dari KOF",
+        "Suara original KOF",
+        "Combo animation baru",
+        "Victory pose khusus"
+      ]
+    },
+    {
+      "id": "leomord-epic",
+      "name": "Leomord",
+      "title": "Lava Soul",
+      "type": "Epic Skin",
+      "category": "Epic",
+      "rarity": "special",
+      "image": "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "description": "Skin epic dengan tema lava yang memberikan efek visual memukau di battlefield. Kuda dan rider dipenuhi dengan kekuatan api yang berkobar.",
+      "price": "1089 Diamonds",
+      "availability": "Tersedia",
+      "features": [
+        "Horse dengan efek lava",
+        "Trail effect saat bergerak",
+        "Ultimate dengan ledakan lava",
+        "Background theme musik"
+      ]
+    },
+    {
+      "id": "martis-anime",
+      "name": "Martis",
+      "title": "Attack on Titan",
+      "type": "Anime Skin",
+      "category": "Anime",
+      "rarity": "anime",
+      "image": "https://images.pexels.com/photos/157675/fashion-men-s-individuality-black-and-white-157675.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "description": "Kolaborasi dengan Attack on Titan membawa Martis dalam balutan Survey Corps. Gunakan 3D Maneuver Gear untuk menyerang para titan!",
+      "price": "Event Khusus",
+      "availability": "Terbatas",
+      "features": [
+        "3D Maneuver Gear equipment",
+        "Titan slaying animations",
+        "Survey Corps uniform",
+        "AOT theme music"
+      ]
+    },
+    {
+      "id": "hayabusa-anime",
+      "name": "Hayabusa",
+      "title": "Naruto Collaboration",
+      "type": "Anime Skin",
+      "category": "Anime",
+      "rarity": "anime",
+      "image": "https://images.pexels.com/photos/247676/pexels-photo-247676.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "description": "Transformasi ninja legend dengan teknik dan gaya bertarung ala Sasuke Uchiha. Gunakan kekuatan Sharingan untuk mengalahkan musuh!",
+      "price": "Event Khusus",
+      "availability": "Terbatas",
+      "features": [
+        "Sharingan eye effect",
+        "Chidori lightning attack",
+        "Ninja run animation",
+        "Naruto soundtrack"
+      ]
+    },
+    {
+      "id": "gusion-cyber",
+      "name": "Gusion",
+      "title": "Cyber Ops",
+      "type": "Cyber Skin",
+      "category": "Epic",
+      "rarity": "epic",
+      "image": "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "description": "Skin futuristik dengan teknologi cyber yang canggih. Gunakan senjata laser dan teknologi masa depan untuk mengalahkan musuh.",
+      "price": "899 Diamonds",
+      "availability": "Tersedia",
+      "features": [
+        "Holographic daggers",
+        "Cyber tech effects",
+        "Neon trail animations",
+        "Electronic sound effects"
+      ]
+    },
+    {
+      "id": "granger-lightborn",
+      "name": "Granger",
+      "title": "Lightborn",
+      "type": "Lightborn Skin",
+      "category": "Special",
+      "rarity": "special",
+      "image": "https://images.pexels.com/photos/247676/pexels-photo-247676.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "description": "Skin dengan kekuatan cahaya yang mempesona. Tembakan violet yang bercahaya dengan efek visual yang memukau mata.",
+      "price": "1350 Diamonds",
+      "availability": "Tersedia",
+      "features": [
+        "Light-infused bullets",
+        "Radiant skill effects",
+        "Angel wings on ultimate",
+        "Divine sound effects"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "starlight-june",
+      "title": "Starlight Perks Juni 2025",
+      "description": "Dapatkan skin eksklusif dan berbagai reward menarik di event Starlight bulan ini! Nikmati privilege member dengan berbagai keuntungan ekslusif.",
+      "image": "https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "date": "1-30 Juni 2025",
+      "type": "Starlight",
+      "status": "Active",
+      "rewards": [
+        "Yin Starlight Skin",
+        "30 Diamonds bonus",
+        "50% Discount coupon",
+        "Exclusive avatar border"
+      ]
+    },
+    {
+      "id": "elegy-event",
+      "title": "An Elegy of Spears and Flowers",
+      "description": "Event spesial dengan tema oriental yang menghadirkan skin dan item eksklusif terbaru. Jelajahi dunia yang penuh dengan keindahan bunga sakura.",
+      "image": "https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "date": "15-30 Juni 2025",
+      "type": "Special",
+      "status": "Coming Soon",
+      "rewards": [
+        "Cherry Blossom themed skins",
+        "Oriental decorations",
+        "Sakura pet",
+        "Limited time achievements"
+      ]
+    },
+    {
+      "id": "summer-carnival",
+      "title": "Summer Carnival 2025",
+      "description": "Event musim panas dengan berbagai mini games dan hadiah menarik. Raih skin summer edition dan item eksklusif lainnya!",
+      "image": "https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "date": "1-31 Juli 2025",
+      "type": "Seasonal",
+      "status": "Upcoming",
+      "rewards": [
+        "Summer edition skins",
+        "Beach volleyball emotes",
+        "Tropical pets",
+        "Vacation recall effects"
+      ]
+    },
+    {
+      "id": "anniversary-bash",
+      "title": "MLBB 8th Anniversary",
+      "description": "Rayakan ulang tahun ke-8 Mobile Legends dengan event terbesar tahun ini! Dapatkan hadiah anniversary yang luar biasa.",
+      "image": "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "date": "14-28 Juli 2025",
+      "type": "Anniversary",
+      "status": "Upcoming",
+      "rewards": [
+        "Anniversary legendary skin",
+        "8888 Diamonds giveaway",
+        "Golden tickets",
+        "Commemorative achievements"
+      ]
+    }
+  ],
+  "trending": [
+    {
+      "name": "Starlight Juni 2025",
+      "badge": "Hot",
+      "color": "red"
+    },
+    {
+      "name": "Hayabusa Anime Skin",
+      "badge": "New",
+      "color": "green"
+    },
+    {
+      "name": "Martis AoT Skin",
+      "badge": "Popular",
+      "color": "blue"
+    },
+    {
+      "name": "Leomord Lava Soul",
+      "badge": "Limited",
+      "color": "purple"
+    },
+    {
+      "name": "Summer Event 2025",
+      "badge": "Coming",
+      "color": "blue"
+    },
+    {
+      "name": "Anniversary Celebration",
+      "badge": "Special",
+      "color": "red"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Rizki Gaming",
+      "rating": 5,
+      "comment": "Pelayanan sangat memuaskan! Dari Epic ke Legend hanya dalam 3 hari. Recommended banget!",
+      "service": "Joki Rank"
+    },
+    {
+      "name": "Sarah MLBB",
+      "rating": 5,
+      "comment": "Top up diamond murah dan cepat. Gak sampai 5 menit langsung masuk. Terima kasih!",
+      "service": "Top Up Diamond"
+    },
+    {
+      "name": "Doni Pro",
+      "rating": 5,
+      "comment": "Joki classic nya bagus, semua misi event selesai dengan sempurna. Puas banget!",
+      "service": "Joki Classic"
+    }
+  ]
+}
