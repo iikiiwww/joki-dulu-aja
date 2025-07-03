@@ -5,26 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joki Rank MLBB - Jasa Joki Terpercaya</title>
   <meta name="description" content="Jasa joki rank Mobile Legends terpercaya, aman, dan profesional. Login via ID dengan harga terjangkau.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navigation -->
-  <header class="navbar">
+  <header class="navbar" id="navbar">
     <div class="nav-container">
       <div class="logo-container">
-        <img src="mlbb.png" alt="MLBB Logo" class="logo">
+        <div class="logo">
+          <i class="fas fa-gamepad"></i>
+        </div>
         <span class="site-title">Joki MLBB</span>
       </div>
-      <nav class="nav-links">
-        <a href="#home" class="nav-link active">Home</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#skins" class="nav-link">Skins</a>
-        <a href="#events" class="nav-link">Events</a>
-        <a href="#contact" class="nav-link">Contact</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active" data-section="home">Home</a>
+        <a href="#services" class="nav-link" data-section="services">Services</a>
+        <a href="#skins" class="nav-link" data-section="skins">Skins</a>
+        <a href="#events" class="nav-link" data-section="events">Events</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
       </nav>
-      <button class="mobile-menu-btn">
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
         <i class="fas fa-bars"></i>
       </button>
     </div>
@@ -32,10 +34,15 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <div class="hero-background"></div>
+    <div class="hero-background">
+      <div class="hero-overlay"></div>
+    </div>
     <div class="hero-content">
       <div class="hero-text">
-        <h1 class="hero-title">JOKI RANK MLBB</h1>
+        <h1 class="hero-title">
+          JOKI RANK
+          <span class="gradient-text">MLBB</span>
+        </h1>
         <p class="hero-subtitle">Nikmati Jasa Joki Terpercaya, Terbaik, Lebih Aman dan Login via ID!</p>
         <div class="hero-features">
           <div class="feature">
@@ -51,43 +58,26 @@
             <span>Terpercaya</span>
           </div>
         </div>
-        <button class="btn-primary">
+        <button class="btn-primary" onclick="scrollToSection('services')">
           <i class="fas fa-play"></i>
           Mulai Joki Sekarang
         </button>
       </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-icon"></div>
     </div>
   </section>
 
   <!-- Services Section -->
   <section id="services" class="services-section">
     <div class="container">
-      <h2 class="section-title">Layanan Kami</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-trophy"></i>
-          </div>
-          <h3>Joki Rank</h3>
-          <p>Naik rank dengan cepat dan aman dari Warrior hingga Mythical Glory</p>
-          <div class="service-price">Mulai dari Rp 10.000</div>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-gem"></i>
-          </div>
-          <h3>Top Up Diamond</h3>
-          <p>Top up diamond dengan harga terjangkau dan proses instan</p>
-          <div class="service-price">Mulai dari Rp 15.000</div>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-medal"></i>
-          </div>
-          <h3>Joki Classic</h3>
-          <p>Menyelesaikan misi dan achievement dengan profesional</p>
-          <div class="service-price">Mulai dari Rp 5.000</div>
-        </div>
+      <div class="section-header">
+        <h2 class="section-title">Layanan Unggulan Kami</h2>
+        <p class="section-subtitle">Pilih layanan terbaik untuk meningkatkan pengalaman bermain Mobile Legends Anda</p>
+      </div>
+      <div class="services-grid" id="servicesGrid">
+        <!-- Services will be loaded from JSON -->
       </div>
     </div>
   </section>
@@ -95,145 +85,45 @@
   <!-- Skins Section -->
   <section id="skins" class="skins-section">
     <div class="container">
-      <h2 class="section-title">Skin Terbaru di Land of Dawn!</h2>
+      <div class="section-header">
+        <h2 class="section-title">Koleksi Skin Terbaru</h2>
+        <p class="section-subtitle">Jelajahi skin terlengkap di Land of Dawn!</p>
+      </div>
       <div class="content-wrapper">
         <div class="main-content">
-          <div class="skins-grid">
-            <div class="skin-card">
-              <div class="skin-image">
-                <img src="yin.png" alt="Yin Starlight Skin">
-                <div class="skin-overlay">
-                  <button class="view-btn" data-target="yin.html">Lihat Detail</button>
-                </div>
-              </div>
-              <div class="skin-info">
-                <h4>Yin</h4>
-                <p class="skin-type">Starlight Skin</p>
-                <div class="skin-rarity starlight">Starlight</div>
-              </div>
+          <div class="skins-header">
+            <h3 id="skinsCount">Loading skins...</h3>
+            <div class="view-toggle">
+              <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+              <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
             </div>
-            
-            <div class="skin-card">
-              <div class="skin-image">
-                <img src="blmnd.jpg" alt="Balmond Collector Skin">
-                <div class="skin-overlay">
-                  <button class="view-btn">Lihat Detail</button>
-                </div>
-              </div>
-              <div class="skin-info">
-                <h4>Balmond</h4>
-                <p class="skin-type">Collector Skin</p>
-                <div class="skin-rarity collector">Collector</div>
-              </div>
-            </div>
-            
-            <div class="skin-card">
-              <div class="skin-image">
-                <img src="kof.png" alt="Chou KOF Skin">
-                <div class="skin-overlay">
-                   <button class="view-btn" data-target="balmond.html">Lihat Detail</button>
-                </div>
-              </div>
-              <div class="skin-info">
-                <h4>Chou</h4>
-                <p class="skin-type">KOF Skin</p>
-                <div class="skin-rarity epic">Epic</div>
-              </div>
-            </div>
-            
-            <div class="skin-card">
-              <div class="skin-image">
-                <img src="leo.jpg" alt="Leomord Epic Skin">
-                <div class="skin-overlay">
-                  <button class="view-btn">Lihat Detail</button>
-                </div>
-              </div>
-              <div class="skin-info">
-                <h4>Leomord</h4>
-                <p class="skin-type">Epic Skin</p>
-                <div class="skin-rarity special">Special</div>
-              </div>
-            </div>
-            
-            <div class="skin-card">
-              <div class="skin-image">
-                <img src="aot.png" alt="Martis Anime Skin">
-                <div class="skin-overlay">
-                  <button class="view-btn">Lihat Detail</button>
-                </div>
-              </div>
-              <div class="skin-info">
-                <h4>Martis</h4>
-                <p class="skin-type">Anime Skin</p>
-                <div class="skin-rarity anime">Anime</div>
-              </div>
-            </div>
-            
-            <div class="skin-card">
-              <div class="skin-image">
-                <img src="sasuke.png" alt="Soyou Anime Skin">
-                <div class="skin-overlay">
-                  <button class="view-btn">Lihat Detail</button>
-                </div>
-              </div>
-              <div class="skin-info">
-                <h4>Soyou</h4>
-                <p class="skin-type">Anime Skin</p>
-                <div class="skin-rarity anime">Anime</div>
-              </div>
-            </div>
+          </div>
+          <div class="skins-grid" id="skinsGrid">
+            <!-- Skins will be loaded from JSON -->
           </div>
         </div>
         
         <aside class="sidebar">
           <div class="sidebar-card">
-            <h3>Search Skins</h3>
+            <h3><i class="fas fa-search"></i> Search Skins</h3>
             <div class="search-box">
-              <input type="text" placeholder="Cari skin favorit...">
-              <button><i class="fas fa-search"></i></button>
+              <input type="text" id="skinSearch" placeholder="Cari skin favorit...">
+              <button onclick="searchSkins()"><i class="fas fa-search"></i></button>
             </div>
           </div>
           
           <div class="sidebar-card">
-            <h3>Kategori</h3>
-            <ul class="category-list">
-              <li><a href="#" class="category-link active">Semua <span class="count">24</span></a></li>
-              <li><a href="#" class="category-link">Epic <span class="count">8</span></a></li>
-              <li><a href="#" class="category-link">Collector <span class="count">5</span></a></li>
-              <li><a href="#" class="category-link">Anime <span class="count">6</span></a></li>
-              <li><a href="#" class="category-link">Starlight <span class="count">5</span></a></li>
+            <h3><i class="fas fa-filter"></i> Kategori</h3>
+            <ul class="category-list" id="categoryList">
+              <!-- Categories will be loaded dynamically -->
             </ul>
           </div>
           
           <div class="sidebar-card">
-            <h3>Sedang Trending</h3>
-            <ul class="trending-list">
-              <li>
-                <div class="trending-item">
-                  <span class="trending-name">Starlight Juni 2025</span>
-                  <span class="trending-badge">Hot</span>
-                </div>
-              </li>
-              <li>
-                <div class="trending-item">
-                  <span class="trending-name">Soyou Anime Skin</span>
-                  <span class="trending-badge">New</span>
-                </div>
-              </li>
-              <li>
-                <div class="trending-item">
-                  <span class="trending-name">Martis Anime Skin</span>
-                  <span class="trending-badge">Popular</span>
-                </div>
-              </li>
-              <li>
-                <div class="trending-item">
-                  <span class="trending-name">Leomord Lava Soul</span>
-                  <span class="trending-badge">Limited</span>
-                </div>
-              </li>
+            <h3><i class="fas fa-fire"></i> Sedang Trending</h3>
+            <ul class="trending-list" id="trendingList">
+              <!-- Trending items will be loaded from JSON -->
             </ul>
-            <button class="btn-secondary">Lihat Semua Skin</button>
           </div>
         </aside>
       </div>
@@ -243,37 +133,12 @@
   <!-- Events Section -->
   <section id="events" class="events-section">
     <div class="container">
-      <h2 class="section-title">Event dan Update Terpanas!</h2>
-      <div class="events-grid">
-        <div class="event-card">
-          <div class="event-image">
-            <img src="lukas.jpg" alt="Starlight Event">
-            <div class="event-badge">Active</div>
-          </div>
-          <div class="event-content">
-            <h3>Starlight Perks Juni 2025</h3>
-            <p>Dapatkan skin eksklusif dan berbagai reward menarik di event Starlight bulan ini!</p>
-            <div class="event-meta">
-              <span class="event-date"><i class="fas fa-calendar"></i> 1-30 Juni 2025</span>
-              <span class="event-type">Starlight</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="event-card">
-          <div class="event-image">
-            <img src="ling.png" alt="Elegy Event">
-            <div class="event-badge">Coming Soon</div>
-          </div>
-          <div class="event-content">
-            <h3>An Elegy of Spears and Flowers</h3>
-            <p>Event spesial dengan tema oriental yang menghadirkan skin dan item eksklusif terbaru.</p>
-            <div class="event-meta">
-              <span class="event-date"><i class="fas fa-calendar"></i> 15-30 Juni 2025</span>
-              <span class="event-type">Special</span>
-            </div>
-          </div>
-        </div>
+      <div class="section-header">
+        <h2 class="section-title">Event dan Update Terpanas!</h2>
+        <p class="section-subtitle">Jangan lewatkan event-event menarik di Mobile Legends</p>
+      </div>
+      <div class="events-grid" id="eventsGrid">
+        <!-- Events will be loaded from JSON -->
       </div>
     </div>
   </section>
@@ -281,17 +146,21 @@
   <!-- Contact Section -->
   <section id="contact" class="contact-section">
     <div class="container">
-      <h2 class="section-title">Hubungi Kami</h2>
+      <div class="section-header">
+        <h2 class="section-title">Hubungi Kami</h2>
+        <p class="section-subtitle">Tim customer service kami siap membantu Anda 24/7</p>
+      </div>
       <div class="contact-content">
         <div class="contact-info">
-          <h3>Siap Membantu Anda 24/7</h3>
-          <p>Tim customer service kami siap membantu Anda kapan saja. Hubungi kami melalui platform favorit Anda!</p>
+          <h3>Siap Membantu Anda</h3>
+          <p>Hubungi kami melalui platform favorit Anda!</p>
           <div class="contact-methods">
             <div class="contact-method">
               <i class="fab fa-whatsapp"></i>
               <div>
                 <h4>WhatsApp</h4>
                 <p>+62812-3456-7890</p>
+                <a href="https://wa.me/6281234567890" target="_blank" class="contact-btn">Chat Sekarang</a>
               </div>
             </div>
             <div class="contact-method">
@@ -299,6 +168,7 @@
               <div>
                 <h4>Telegram</h4>
                 <p>@jokimlbb_official</p>
+                <a href="https://t.me/jokimlbb_official" target="_blank" class="contact-btn">Chat Sekarang</a>
               </div>
             </div>
             <div class="contact-method">
@@ -306,30 +176,38 @@
               <div>
                 <h4>Email</h4>
                 <p>rifki@jokimlbb.com</p>
+                <a href="mailto:rifki@jokimlbb.com" class="contact-btn">Kirim Email</a>
               </div>
             </div>
           </div>
         </div>
         <div class="contact-form">
-          <form>
+          <form id="contactForm">
             <div class="form-group">
-              <input type="text" placeholder="Nama Lengkap" required>
+              <input type="text" id="fullName" placeholder="Nama Lengkap" required>
+              <div class="error-message" id="nameError"></div>
             </div>
             <div class="form-group">
-              <input type="email" placeholder="Email" required>
+              <input type="email" id="email" placeholder="Email" required>
+              <div class="error-message" id="emailError"></div>
             </div>
             <div class="form-group">
-              <select required>
+              <select id="serviceType" required>
                 <option value="">Pilih Layanan</option>
                 <option value="joki-rank">Joki Rank</option>
                 <option value="top-up">Top Up Diamond</option>
                 <option value="joki-classic">Joki Classic</option>
               </select>
+              <div class="error-message" id="serviceError"></div>
             </div>
             <div class="form-group">
-              <textarea placeholder="Pesan Anda" rows="4" required></textarea>
+              <textarea id="message" placeholder="Pesan Anda" rows="4" required></textarea>
+              <div class="error-message" id="messageError"></div>
             </div>
-            <button type="submit" class="btn-primary">Kirim Pesan</button>
+            <button type="submit" class="btn-primary">
+              <i class="fas fa-paper-plane"></i>
+              Kirim Pesan
+            </button>
           </form>
         </div>
       </div>
@@ -342,7 +220,9 @@
       <div class="footer-content">
         <div class="footer-section">
           <div class="footer-logo">
-            <img src="mlbb.png" alt="MLBB Logo">
+            <div class="logo">
+              <i class="fas fa-gamepad"></i>
+            </div>
             <span>Joki MLBB</span>
           </div>
           <p>Jasa joki Mobile Legends terpercaya dengan pengalaman bertahun-tahun. Kami mengutamakan keamanan dan kepuasan pelanggan.</p>
@@ -365,20 +245,20 @@
         <div class="footer-section">
           <h4>Layanan</h4>
           <ul>
-            <li><a href="#">Joki Rank</a></li>
-            <li><a href="#">Top Up Diamond</a></li>
-            <li><a href="#">Joki Classic</a></li>
-            <li><a href="#">Boost MMR</a></li>
+            <li><a href="#services">Joki Rank</a></li>
+            <li><a href="#services">Top Up Diamond</a></li>
+            <li><a href="#services">Joki Classic</a></li>
+            <li><a href="#services">Boost MMR</a></li>
           </ul>
         </div>
         
         <div class="footer-section">
           <h4>Informasi</h4>
           <ul>
-            <li><a href="#">Cara Order</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Syarat & Ketentuan</a></li>
-            <li><a href="#">Kebijakan Privasi</a></li>
+            <li><a href="#contact">Cara Order</a></li>
+            <li><a href="#contact">FAQ</a></li>
+            <li><a href="#contact">Syarat & Ketentuan</a></li>
+            <li><a href="#contact">Kebijakan Privasi</a></li>
           </ul>
         </div>
         
@@ -386,7 +266,7 @@
           <h4>Kontak</h4>
           <ul>
             <li><i class="fas fa-phone"></i> +62812-3456-7890</li>
-            <li><i class="fas fa-envelope"></i>rifki@jokimlbb.com</li>
+            <li><i class="fas fa-envelope"></i> rifki@jokimlbb.com</li>
             <li><i class="fas fa-clock"></i> 24/7 Online</li>
           </ul>
         </div>
@@ -398,6 +278,29 @@
       </div>
     </div>
   </footer>
+
+  <!-- Skin Detail Modal -->
+  <div class="modal" id="skinModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeSkinModal()">&times;</span>
+      <div class="modal-body" id="modalBody">
+        <!-- Skin details will be loaded here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading Spinner -->
+  <div class="loading" id="loading">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Success/Error Messages -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="toast-icon"></i>
+      <span class="toast-message"></span>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
