@@ -1,27 +1,207 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yin - Epic Skin</title>
+  <title>Balmond Savage Guardian - Collector Skin | Joki MLBB</title>
+  <meta name="description" content="Detail skin Balmond Savage Guardian - Collector skin dengan desain yang memukau dan efek khusus yang unik.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo-container">
-      <img src="mlbb.png" alt="Logo" class="logo">
-      <span class="site-title">Joki MLBB</span>
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo-container">
+        <div class="logo">
+          <i class="fas fa-gamepad"></i>
+        </div>
+        <span class="site-title">Joki MLBB</span>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#skins" class="nav-link active">Skins</a>
+        <a href="index.html#events" class="nav-link">Events</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-    </nav>
   </header>
-  <main class="detail-page">
-    <h1>Balmond - Collektor Skin</h1>
-    <img src="blmnd.jpg" alt="Balmon Skin">
-    <p>Skin terbaru untuk hero Balmond dengan efek visual collektor yang keren dan animasi ultimate yang berbeda!</p>
-  </main>
-  <footer>
-    &copy; 2025 Joki Rank MLBB. All rights reserved.
+
+  <!-- Skin Detail Section -->
+  <section class="skin-detail-section">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <span><i class="fas fa-chevron-right"></i></span>
+        <a href="index.html#skins">Skins</a>
+        <span><i class="fas fa-chevron-right"></i></span>
+        <span>Balmond Savage Guardian</span>
+      </div>
+
+      <div class="skin-detail-content">
+        <div class="skin-detail-image">
+          <div class="main-image">
+            <img src="https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Balmond Savage Guardian" id="mainImage">
+            <div class="image-overlay">
+              <button class="zoom-btn" onclick="zoomImage()">
+                <i class="fas fa-search-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="thumbnail-gallery">
+            <img src="https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Balmond Thumbnail 1" class="thumbnail active" onclick="changeImage(this)">
+            <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Balmond Thumbnail 2" class="thumbnail" onclick="changeImage(this)">
+            <img src="https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Balmond Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+          </div>
+        </div>
+
+        <div class="skin-detail-info">
+          <div class="skin-header">
+            <h1>Balmond</h1>
+            <h2>Savage Guardian</h2>
+            <div class="skin-meta">
+              <div class="skin-rarity collector">
+                <i class="fas fa-crown"></i>
+                Collector
+              </div>
+              <div class="skin-availability">
+                <i class="fas fa-exclamation-triangle"></i>
+                Langka
+              </div>
+            </div>
+          </div>
+
+          <div class="skin-description">
+            <h3>Deskripsi</h3>
+            <p>Skin collector dengan desain yang memukau dan efek khusus yang unik. Tampil sebagai guardian savage dengan armor yang menawan. Balmond mengenakan armor berat berwarna emas dan merah yang memberikan kesan kekuatan dan dominasi di battlefield.</p>
+          </div>
+
+          <div class="skin-features">
+            <h3>Fitur Khusus</h3>
+            <ul>
+              <li><i class="fas fa-cube"></i> Model 3D yang diubah total</li>
+              <li><i class="fas fa-bolt"></i> Efek ultimate yang spektakuler</li>
+              <li><i class="fas fa-desktop"></i> Background lobby eksklusif</li>
+              <li><i class="fas fa-smile"></i> Emoticon khusus</li>
+            </ul>
+          </div>
+
+          <div class="skin-pricing">
+            <div class="price-info">
+              <div class="price">
+                <span class="price-label">Harga:</span>
+                <span class="price-value">Event Terbatas</span>
+              </div>
+              <div class="availability">
+                <span class="availability-label">Status:</span>
+                <span class="availability-value limited">Langka</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skin-actions">
+            <button class="btn-primary" onclick="orderSkin('Balmond Savage Guardian')">
+              <i class="fas fa-shopping-cart"></i>
+              Pesan Sekarang
+            </button>
+            <button class="btn-secondary" onclick="shareSkin()">
+              <i class="fas fa-share"></i>
+              Share
+            </button>
+            <button class="btn-secondary" onclick="addToWishlist()">
+              <i class="fas fa-heart"></i>
+              Wishlist
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Skins -->
+      <div class="related-skins">
+        <h3>Skin Serupa</h3>
+        <div class="related-grid">
+          <div class="related-card" onclick="window.location.href='yin.html'">
+            <img src="https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Yin Moonlight Sentinel">
+            <div class="related-info">
+              <h4>Yin</h4>
+              <p>Moonlight Sentinel</p>
+              <div class="skin-rarity starlight">Starlight</div>
+            </div>
+          </div>
+          <div class="related-card" onclick="window.location.href='leomord.html'">
+            <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Leomord Lava Soul">
+            <div class="related-info">
+              <h4>Leomord</h4>
+              <p>Lava Soul</p>
+              <div class="skin-rarity special">Special</div>
+            </div>
+          </div>
+          <div class="related-card" onclick="window.location.href='gusion.html'">
+            <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Gusion Cyber Ops">
+            <div class="related-info">
+              <h4>Gusion</h4>
+              <p>Cyber Ops</p>
+              <div class="skin-rarity epic">Epic</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <div class="logo">
+              <i class="fas fa-gamepad"></i>
+            </div>
+            <span>Joki MLBB</span>
+          </div>
+          <p>Jasa joki Mobile Legends terpercaya dengan pengalaman bertahun-tahun. Kami mengutamakan keamanan dan kepuasan pelanggan.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Layanan</h4>
+          <ul>
+            <li><a href="index.html#services">Joki Rank</a></li>
+            <li><a href="index.html#services">Top Up Diamond</a></li>
+            <li><a href="index.html#services">Joki Classic</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Kontak</h4>
+          <ul>
+            <li><i class="fas fa-phone"></i> +62812-3456-7890</li>
+            <li><i class="fas fa-envelope"></i> rifki@jokimlbb.com</li>
+            <li><i class="fas fa-clock"></i> 24/7 Online</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Joki Rank MLBB. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
+
+  <!-- Toast Messages -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="toast-icon"></i>
+      <span class="toast-message"></span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
