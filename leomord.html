@@ -1,27 +1,207 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yin - Epic Skin</title>
+  <title>Leomord Lava Soul - Epic Skin | Joki MLBB</title>
+  <meta name="description" content="Detail skin Leomord Lava Soul - Skin epic dengan tema lava yang memberikan efek visual memukau di battlefield.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo-container">
-      <img src="mlbb.png" alt="Logo" class="logo">
-      <span class="site-title">Joki MLBB</span>
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo-container">
+        <div class="logo">
+          <i class="fas fa-gamepad"></i>
+        </div>
+        <span class="site-title">Joki MLBB</span>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#skins" class="nav-link active">Skins</a>
+        <a href="index.html#events" class="nav-link">Events</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-    </nav>
   </header>
-  <main class="detail-page">
-    <h1>Leomord - Epic Skin</h1>
-    <img src="leo.jpg" alt="Leomord Skin">
-    <p>Skin terbaru untuk hero Leomord dengan efek visual epic yang keren dan animasi ultimate yang berbeda!</p>
-  </main>
-  <footer>
-    &copy; 2025 Joki Rank MLBB. All rights reserved.
+
+  <!-- Skin Detail Section -->
+  <section class="skin-detail-section">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <span><i class="fas fa-chevron-right"></i></span>
+        <a href="index.html#skins">Skins</a>
+        <span><i class="fas fa-chevron-right"></i></span>
+        <span>Leomord Lava Soul</span>
+      </div>
+
+      <div class="skin-detail-content">
+        <div class="skin-detail-image">
+          <div class="main-image">
+            <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Leomord Lava Soul" id="mainImage">
+            <div class="image-overlay">
+              <button class="zoom-btn" onclick="zoomImage()">
+                <i class="fas fa-search-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="thumbnail-gallery">
+            <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Leomord Thumbnail 1" class="thumbnail active" onclick="changeImage(this)">
+            <img src="https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Leomord Thumbnail 2" class="thumbnail" onclick="changeImage(this)">
+            <img src="https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Leomord Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+          </div>
+        </div>
+
+        <div class="skin-detail-info">
+          <div class="skin-header">
+            <h1>Leomord</h1>
+            <h2>Lava Soul</h2>
+            <div class="skin-meta">
+              <div class="skin-rarity special">
+                <i class="fas fa-gem"></i>
+                Special
+              </div>
+              <div class="skin-availability">
+                <i class="fas fa-check-circle"></i>
+                Tersedia
+              </div>
+            </div>
+          </div>
+
+          <div class="skin-description">
+            <h3>Deskripsi</h3>
+            <p>Skin epic dengan tema lava yang memberikan efek visual memukau di battlefield. Kuda dan rider dipenuhi dengan kekuatan api yang berkobar. Leomord tampil dengan armor berwarna merah menyala dan efek lava yang mengalir di seluruh tubuhnya, menciptakan aura yang menakutkan di medan perang.</p>
+          </div>
+
+          <div class="skin-features">
+            <h3>Fitur Khusus</h3>
+            <ul>
+              <li><i class="fas fa-horse"></i> Horse dengan efek lava</li>
+              <li><i class="fas fa-fire"></i> Trail effect saat bergerak</li>
+              <li><i class="fas fa-explosion"></i> Ultimate dengan ledakan lava</li>
+              <li><i class="fas fa-music"></i> Background theme musik</li>
+            </ul>
+          </div>
+
+          <div class="skin-pricing">
+            <div class="price-info">
+              <div class="price">
+                <span class="price-label">Harga:</span>
+                <span class="price-value">1089 Diamonds</span>
+              </div>
+              <div class="availability">
+                <span class="availability-label">Status:</span>
+                <span class="availability-value available">Tersedia</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skin-actions">
+            <button class="btn-primary" onclick="orderSkin('Leomord Lava Soul')">
+              <i class="fas fa-shopping-cart"></i>
+              Pesan Sekarang
+            </button>
+            <button class="btn-secondary" onclick="shareSkin()">
+              <i class="fas fa-share"></i>
+              Share
+            </button>
+            <button class="btn-secondary" onclick="addToWishlist()">
+              <i class="fas fa-heart"></i>
+              Wishlist
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Skins -->
+      <div class="related-skins">
+        <h3>Skin Serupa</h3>
+        <div class="related-grid">
+          <div class="related-card" onclick="window.location.href='granger.html'">
+            <img src="https://images.pexels.com/photos/247676/pexels-photo-247676.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Granger Lightborn">
+            <div class="related-info">
+              <h4>Granger</h4>
+              <p>Lightborn</p>
+              <div class="skin-rarity special">Special</div>
+            </div>
+          </div>
+          <div class="related-card" onclick="window.location.href='balmond.html'">
+            <img src="https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Balmond Savage Guardian">
+            <div class="related-info">
+              <h4>Balmond</h4>
+              <p>Savage Guardian</p>
+              <div class="skin-rarity collector">Collector</div>
+            </div>
+          </div>
+          <div class="related-card" onclick="window.location.href='gusion.html'">
+            <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Gusion Cyber Ops">
+            <div class="related-info">
+              <h4>Gusion</h4>
+              <p>Cyber Ops</p>
+              <div class="skin-rarity epic">Epic</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <div class="logo">
+              <i class="fas fa-gamepad"></i>
+            </div>
+            <span>Joki MLBB</span>
+          </div>
+          <p>Jasa joki Mobile Legends terpercaya dengan pengalaman bertahun-tahun. Kami mengutamakan keamanan dan kepuasan pelanggan.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Layanan</h4>
+          <ul>
+            <li><a href="index.html#services">Joki Rank</a></li>
+            <li><a href="index.html#services">Top Up Diamond</a></li>
+            <li><a href="index.html#services">Joki Classic</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Kontak</h4>
+          <ul>
+            <li><i class="fas fa-phone"></i> +62812-3456-7890</li>
+            <li><i class="fas fa-envelope"></i> rifki@jokimlbb.com</li>
+            <li><i class="fas fa-clock"></i> 24/7 Online</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Joki Rank MLBB. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
+
+  <!-- Toast Messages -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="toast-icon"></i>
+      <span class="toast-message"></span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
