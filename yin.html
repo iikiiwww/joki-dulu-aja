@@ -1,53 +1,207 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Detail Skin Yin - Starlight</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yin Moonlight Sentinel - Starlight Skin | Joki MLBB</title>
+  <meta name="description" content="Detail skin Yin Moonlight Sentinel - Starlight skin eksklusif dengan efek visual yang menakjubkan.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo-container">
-      <img src="mlbb.png" alt="Logo" class="logo" />
-      <span class="site-title">Joki MLBB</span>
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo-container">
+        <div class="logo">
+          <i class="fas fa-gamepad"></i>
+        </div>
+        <span class="site-title">Joki MLBB</span>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#skins" class="nav-link active">Skins</a>
+        <a href="index.html#events" class="nav-link">Events</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="#">Guide</a>
-      <a href="#">Event</a>
-      <a href="#">Contact</a>
-    </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>YIN - Starlight Skin</h1>
-      <p>Skin eksklusif Starlight Juni 2025, dengan efek skill dan animasi recall yang keren!</p>
+  <!-- Skin Detail Section -->
+  <section class="skin-detail-section">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <span><i class="fas fa-chevron-right"></i></span>
+        <a href="index.html#skins">Skins</a>
+        <span><i class="fas fa-chevron-right"></i></span>
+        <span>Yin Moonlight Sentinel</span>
+      </div>
+
+      <div class="skin-detail-content">
+        <div class="skin-detail-image">
+          <div class="main-image">
+            <img src="https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Yin Moonlight Sentinel" id="mainImage">
+            <div class="image-overlay">
+              <button class="zoom-btn" onclick="zoomImage()">
+                <i class="fas fa-search-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="thumbnail-gallery">
+            <img src="https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Yin Thumbnail 1" class="thumbnail active" onclick="changeImage(this)">
+            <img src="https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Yin Thumbnail 2" class="thumbnail" onclick="changeImage(this)">
+            <img src="https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Yin Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+          </div>
+        </div>
+
+        <div class="skin-detail-info">
+          <div class="skin-header">
+            <h1>Yin</h1>
+            <h2>Moonlight Sentinel</h2>
+            <div class="skin-meta">
+              <div class="skin-rarity starlight">
+                <i class="fas fa-star"></i>
+                Starlight
+              </div>
+              <div class="skin-availability">
+                <i class="fas fa-clock"></i>
+                Terbatas
+              </div>
+            </div>
+          </div>
+
+          <div class="skin-description">
+            <h3>Deskripsi</h3>
+            <p>Skin eksklusif dari event Starlight bulan ini dengan efek visual yang menakjubkan. Dapatkan tampilan yang elegan dengan animasi khusus yang memukau di battlefield. Yin tampil dengan armor berwarna perak dan biru yang berkilauan di bawah sinar bulan.</p>
+          </div>
+
+          <div class="skin-features">
+            <h3>Fitur Khusus</h3>
+            <ul>
+              <li><i class="fas fa-magic"></i> Efek skill yang berbeda</li>
+              <li><i class="fas fa-home"></i> Animasi recall eksklusif</li>
+              <li><i class="fas fa-volume-up"></i> Voice line khusus</li>
+              <li><i class="fas fa-sparkles"></i> Spawn effect unik</li>
+            </ul>
+          </div>
+
+          <div class="skin-pricing">
+            <div class="price-info">
+              <div class="price">
+                <span class="price-label">Harga:</span>
+                <span class="price-value">Starlight Member</span>
+              </div>
+              <div class="availability">
+                <span class="availability-label">Status:</span>
+                <span class="availability-value available">Tersedia</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skin-actions">
+            <button class="btn-primary" onclick="orderSkin('Yin Moonlight Sentinel')">
+              <i class="fas fa-shopping-cart"></i>
+              Pesan Sekarang
+            </button>
+            <button class="btn-secondary" onclick="shareSkin()">
+              <i class="fas fa-share"></i>
+              Share
+            </button>
+            <button class="btn-secondary" onclick="addToWishlist()">
+              <i class="fas fa-heart"></i>
+              Wishlist
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Skins -->
+      <div class="related-skins">
+        <h3>Skin Serupa</h3>
+        <div class="related-grid">
+          <div class="related-card" onclick="window.location.href='balmond.html'">
+            <img src="https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Balmond Savage Guardian">
+            <div class="related-info">
+              <h4>Balmond</h4>
+              <p>Savage Guardian</p>
+              <div class="skin-rarity collector">Collector</div>
+            </div>
+          </div>
+          <div class="related-card" onclick="window.location.href='granger.html'">
+            <img src="https://images.pexels.com/photos/247676/pexels-photo-247676.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Granger Lightborn">
+            <div class="related-info">
+              <h4>Granger</h4>
+              <p>Lightborn</p>
+              <div class="skin-rarity special">Special</div>
+            </div>
+          </div>
+          <div class="related-card" onclick="window.location.href='chou.html'">
+            <img src="https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Chou Dragon Fighter">
+            <div class="related-info">
+              <h4>Chou</h4>
+              <p>Dragon Fighter</p>
+              <div class="skin-rarity epic">Epic</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="detail-page">
-    <img src="yin.png" alt="Yin Starlight Skin" />
-    <div class="hero-content" style="text-align: center; max-width: 800px; margin: auto;">
-      <h2>Deskripsi Skin</h2>
-      <p>
-        Yin mendapatkan tampilan baru yang penuh aura petarung! Starlight skin ini menambahkan efek skill biru menyala, voice line eksklusif, dan animasi khusus saat masuk game. Dapatkan skin ini hanya di bulan Juni 2025!
-      </p>
-      <button class="btn-primary">Pesan Sekarang</button>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 Joki Rank MLBB</p>
-      <div class="social-links">
-        <a href="https://instagram.com/jokimlbb" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://youtube.com/@jokimlbb" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://twitter.com/jokimlbb" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://facebook.com/jokimlbb" target="_blank"><i class="fab fa-facebook"></i></a>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <div class="logo">
+              <i class="fas fa-gamepad"></i>
+            </div>
+            <span>Joki MLBB</span>
+          </div>
+          <p>Jasa joki Mobile Legends terpercaya dengan pengalaman bertahun-tahun. Kami mengutamakan keamanan dan kepuasan pelanggan.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Layanan</h4>
+          <ul>
+            <li><a href="index.html#services">Joki Rank</a></li>
+            <li><a href="index.html#services">Top Up Diamond</a></li>
+            <li><a href="index.html#services">Joki Classic</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Kontak</h4>
+          <ul>
+            <li><i class="fas fa-phone"></i> +62812-3456-7890</li>
+            <li><i class="fas fa-envelope"></i> rifki@jokimlbb.com</li>
+            <li><i class="fas fa-clock"></i> 24/7 Online</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Joki Rank MLBB. All rights reserved.</p>
       </div>
     </div>
   </footer>
+
+  <!-- Toast Messages -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="toast-icon"></i>
+      <span class="toast-message"></span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
